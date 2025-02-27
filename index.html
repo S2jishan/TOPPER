@@ -1,15 +1,199 @@
-<html>
-   <head>
-       <title>Sample HTML Code</title>
-   </head>
-   <body>
-       <h1>Hello World</h1>
-   </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://ar-hosting.pages.dev/1732685445731.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://ar-hosting.pages.dev/1732685445731.jpg" type="image/x-icon">
+    <title>TOPPER HUB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Background Bubble Animation */
+        .bubbles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: floatUp linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            padding: 1rem 0;
+            text-align: center;
+            background: ORANGE;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: YELLOW;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            margin: 0;
+        }
+
+        .container {
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .batch-card {
+            width: 350px;
+            border-radius: 15px;
+            overflow: hidden;
+            background: BLACK;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .batch-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            cursor: pointer;
+        }
+
+        .batch-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .batch-info {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #3b3b3b, #222);
+            color: YELLOW;
+        }
+
+        .batch-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin: 10px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .description {
+            font-size: 1rem;
+            color: YELLOW;
+            margin: 10px 0;
+        }
+
+        .lets-study {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: YELLOW;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 8px 15px;
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            color: WHITE;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bubble Animation Background -->
+    <div class="bubbles"></div>
+
+    <header>
+        <h1>TOPPER HUB</h1>
+    </header>
+
+    <div class="container">
+        <div class="batch-card">
+            <div class="badge">FREE</div>
+            <img src='myimages/MAINIMAGEAAR.png'/>
+            <div class="batch-info">
+                <h3 class="batch-title">Aarambh 2025 ~ Class 10th</h3>
+                <p class="description">For Class 10th CBSE Students</p>
+                <a href="Generate key.html" class="lets-study">Let's Study</a>
+            </div>
+        </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function createBubbles() {
+            const bubbleContainer = document.querySelector('.bubbles');
+
+            for (let i = 0; i < 20; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                bubble.style.width = `${Math.random() * 50 + 10}px`;
+                bubble.style.height = bubble.style.width;
+                bubble.style.left = `${Math.random() * 100}vw`;
+                bubble.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                bubble.style.animationDelay = `${Math.random() * 3}s`;
+                bubbleContainer.appendChild(bubble);
+            }
+        }
+
+        createBubbles();
+    </script>
+
+</body>
 </html>
-<ALOASK-SEPARATE-EDITORS>html {
-   background: linear-gradient(to right, dodgerblue 0%, deepskyblue 100%);
-}
-h1{
-   color: white;
-}
-<ALOASK-SEPARATE-EDITORS>console.log('JavaScript Console');
